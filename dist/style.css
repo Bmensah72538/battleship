@@ -1,0 +1,40 @@
+.game {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gameboard {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+/* .player1Node {
+    border: dotted 2px red;
+}
+
+.player2Node {
+    border: dotted 2px blue;
+} */
+
+.gameboard > *{
+    border: solid 2px black;
+}
+
+.player1Node[data-ship=true] {
+    background-color: green;
+}
+
+.player1Node[data-attacked=true][data-ship=true] {
+    background-color: red;
+}
+
+.player2Node[data-ship=true] {
+    background-color: green;
+}
+
+.player2Node[data-attacked=true][data-ship=true] {
+    background-color: red;
+}
